@@ -14,3 +14,5 @@ env/
 # Generator scripts
 build_notebook.py
 
+# Local folder wrapper for file manager
+tugas sain data ipynb/
