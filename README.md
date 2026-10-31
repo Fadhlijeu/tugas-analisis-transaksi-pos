@@ -17,13 +17,3 @@ Repositori ini berisi pengerjaan tugas analisis data transaksi POS (Point of Sal
 | :---: | :---: | :---: | :---: | :---: | :---: |
 | **2024** | 2.327 | 5.967 unit | Rp 130.883.500 | Rp 3.477.025 | **Rp 127.406.475** |
 | **2025** | 2.345 | 6.050 unit | Rp 138.664.000 | Rp 3.662.900 | **Rp 135.001.100** |
-
-## Perbandingan Berdasarkan Skenario Data
-
-Tabel berikut menunjukkan bukti perubahan nilai jika status transaksi atau anomali data tidak ditangani:
-
-| Skenario | Tahun 2024 | Tahun 2025 | Keterangan |
-| :--- | :---: | :---: | :--- |
-| Semua status & anomali ikut | Rp 393.226.200 | Rp 271.871.425 | Tidak valid (batal, retur, dan typo ikut terhitung) |
-| Hanya SELESAI, anomali ikut | Rp 386.237.375 | Rp 257.085.100 | Masih bias karena anomali kuantitas ribuan belum dibuang |
-| **Hanya SELESAI & anomali dibuang (Final)** | **Rp 127.406.475** | **Rp 135.001.100** | **Hasil riil dan akurat** |
