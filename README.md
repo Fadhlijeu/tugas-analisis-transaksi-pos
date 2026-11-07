@@ -1,28 +1,33 @@
 # Analisis Transaksi POS 2024–2025
 
-Notebook ini memuat dua bagian pengolahan dataset transaksi POS: analisis pendapatan tahunan dan manipulasi data dengan Pandas.
+Repository ini berisi dua notebook pengolahan data transaksi POS dengan dataset yang sama.
 
-Dataset yang digunakan: `paket_a_transaksi_pos_2024_2025.csv`.
+Dataset: `paket_a_transaksi_pos_2024_2025.csv`.
 
-## Isi Notebook
+## Daftar Tugas
 
 ### Tugas 1 — Analisis Pendapatan
+
+File: `analisis_transaksi_pos.ipynb`
 
 - Memeriksa duplikat dan nilai kosong.
 - Membersihkan format tanggal dan harga.
 - Memeriksa kuantitas yang tidak wajar.
-- Menghitung pendapatan bersih untuk tahun 2024 dan 2025.
+- Menghitung pendapatan bersih tahun 2024 dan 2025.
 - Menyimpan ringkasan pendapatan dan grafik.
 
 ### Tugas 2 — Manipulasi Data dengan Pandas
 
-- Membersihkan harga dan menangani kuantitas negatif.
-- Mengisi kode kasir kosong dan memilih kolom dengan `.iloc[]`.
-- Menghitung omzet kotor, diskon, dan omzet bersih termasuk PPN 11%.
-- Menyaring dan mengurutkan transaksi.
-- Membuat ringkasan per gerai dengan `.groupby()`, `.agg()`, dan `.transform()`.
+File: `tugas_manipulasi_data_pandas.ipynb`
 
-Bagian Tugas 2 membaca ulang CSV asli. Proses ini terpisah dari pembersihan data pada Tugas 1.
+- Membersihkan format harga dan mengubah tipe data menjadi numerik.
+- Mengubah kuantitas negatif menjadi positif.
+- Mengisi kode kasir kosong dan memilih kolom dengan `.iloc[]`.
+- Menghitung omzet kotor, diskon, omzet bersih, dan PPN 11%.
+- Menyaring dan mengurutkan transaksi.
+- Membuat laporan gerai dengan `.groupby()`, `.agg()`, dan `.transform()`.
+
+Kedua tugas berada dalam file notebook yang berbeda. Tugas 2 membaca dataset langsung dari CSV asli.
 
 ## Hasil Analisis Pendapatan
 
@@ -33,4 +38,4 @@ Bagian Tugas 2 membaca ulang CSV asli. Proses ini terpisah dari pembersihan data
 
 ## Menjalankan Notebook
 
-Buka `analisis_transaksi_pos.ipynb` melalui Jupyter Notebook atau Google Colab. Letakkan file CSV di direktori yang sama dengan notebook. Paket yang digunakan: `pandas`, `numpy`, dan `matplotlib`.
+Buka notebook melalui Jupyter Notebook atau Google Colab. Letakkan file CSV di direktori yang sama dengan notebook. Paket yang digunakan: `pandas`, `numpy`, dan `matplotlib`.
