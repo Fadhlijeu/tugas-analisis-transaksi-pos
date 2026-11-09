@@ -66,7 +66,3 @@ Status transaksi dihitung dari seluruh 2.458 transaksi tahun 2025: 2.324 `SELESA
 | :---: | :---: | :---: | :---: | :---: | :---: |
 | **2024** | 2.327 | 5.967 unit | Rp 130.883.500 | Rp 3.477.025 | **Rp 127.406.475** |
 | **2025** | 2.345 | 6.050 unit | Rp 138.664.000 | Rp 3.662.900 | **Rp 135.001.100** |
-
-## Menjalankan Notebook
-
-Buka notebook melalui Jupyter Notebook atau Google Colab. Letakkan file CSV di direktori yang sama dengan notebook. Paket yang digunakan: `pandas` dan `matplotlib`.
