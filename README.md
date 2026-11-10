@@ -40,25 +40,15 @@ Empat grafik dibuat dari dataset yang sama:
 
 ## Hasil Visualisasi Tahun 2025
 
-Data dibersihkan dengan menghapus 30 baris duplikat. Grafik penjualan dan produk terlaris hanya memakai transaksi `SELESAI` dengan jumlah 1–12 unit. Penjualan bersih dihitung setelah diskon dan sebelum PPN. Batas jumlah 1–12 mengikuti pemeriksaan kuantitas pada tugas analisis sebelumnya agar nilai salah input tidak mendominasi grafik.
+Data dibersihkan dengan menghapus 30 baris duplikat. Grafik penjualan dan produk terlaris memakai transaksi `SELESAI` dengan jumlah 1–12 unit. Penjualan bersih dihitung setelah diskon dan sebelum PPN. Batas jumlah 1–12 digunakan agar nilai salah input tidak mendominasi grafik.
 
-Status transaksi dihitung dari seluruh 2.458 transaksi tahun 2025: 2.324 `SELESAI`, 87 `BATAL`, dan 47 `RETUR`. Grafik proporsi membandingkan `SELESAI` dengan gabungan `BATAL` dan `RETUR`; retur tetap dicantumkan terpisah agar status aslinya jelas.
+Status transaksi dihitung dari seluruh 2.458 transaksi tahun 2025: 2.324 `SELESAI`, 87 `BATAL`, dan 47 `RETUR`. Grafik proporsi membandingkan `SELESAI` dengan gabungan `BATAL` dan `RETUR`. Jumlah `BATAL` dan `RETUR` tetap ditampilkan secara terpisah.
 
-### 1. Penjualan Bersih per Bulan
+Empat grafik ditampilkan dalam satu gambar dengan susunan 2×2.
 
-![Penjualan bersih per bulan tahun 2025](visualisasi_penjualan_bulanan_2025.png)
-
-### 2. Sepuluh Produk Terlaris
-
-![Sepuluh produk terlaris tahun 2025](visualisasi_10_produk_terlaris_2025.png)
-
-### 3. Proporsi Status Transaksi
-
-![Proporsi status transaksi tahun 2025](visualisasi_status_transaksi_2025.png)
-
-### 4. Hubungan Jumlah Pembelian dan Diskon
-
-![Hubungan jumlah pembelian dengan diskon tahun 2025](visualisasi_jumlah_dan_diskon_2025.png)
+<p align="center">
+  <img src="visualisasi_gabungan_2025.png" alt="Empat grafik visualisasi transaksi POS tahun 2025 dalam susunan 2 kali 2" width="100%" />
+</p>
 
 ## Hasil Analisis Pendapatan
 
@@ -66,3 +56,7 @@ Status transaksi dihitung dari seluruh 2.458 transaksi tahun 2025: 2.324 `SELESA
 | :---: | :---: | :---: | :---: | :---: | :---: |
 | **2024** | 2.327 | 5.967 unit | Rp 130.883.500 | Rp 3.477.025 | **Rp 127.406.475** |
 | **2025** | 2.345 | 6.050 unit | Rp 138.664.000 | Rp 3.662.900 | **Rp 135.001.100** |
+
+## Menjalankan Notebook
+
+Buka notebook melalui Jupyter Notebook atau Google Colab. Letakkan file CSV di direktori yang sama dengan notebook. Paket yang digunakan: `pandas` dan `matplotlib`.
