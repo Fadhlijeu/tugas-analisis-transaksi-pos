@@ -17,7 +17,7 @@ Repository ini berisi tiga notebook pengolahan dan analisis menggunakan dataset 
 │   │   ├── grafik_pendapatan_per_tahun.png
 │   │   └── hasil_pendapatan_per_tahun.csv
 │   └── visualisasi/
-│       └── visualisasi_gabungan_2025.png
+│       └── visualisasi_gabungan_2025.svg
 └── README.md
 ```
 
@@ -57,7 +57,7 @@ Empat grafik ditampilkan dalam **satu gambar berasio 1:1**, bukan sebagai empat 
 
 ## Hasil Visualisasi Tahun 2025
 
-![Visualisasi gabungan transaksi POS 2025](outputs/visualisasi/visualisasi_gabungan_2025.png)
+![Visualisasi gabungan transaksi POS 2025](outputs/visualisasi/visualisasi_gabungan_2025.svg)
 
 Data dibersihkan dengan menghapus 30 baris duplikat. Setelah pembersihan terdapat 5.000 baris. Dataset mencatat 2.508 transaksi pada tahun 2025: 2.370 `SELESAI`, 89 `BATAL`, dan 49 `RETUR`.
 
