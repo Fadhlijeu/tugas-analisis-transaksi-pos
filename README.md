@@ -1,24 +1,41 @@
 # Analisis Transaksi POS 2024–2025
 
-Repository ini berisi notebook pengolahan dan visualisasi data transaksi POS dengan dataset yang sama.
+Repository ini berisi tiga notebook pengolahan dan analisis menggunakan dataset transaksi POS yang sama.
 
-Dataset: `paket_a_transaksi_pos_2024_2025.csv`.
+## Struktur Direktori
+
+```text
+.
+├── data/
+│   └── paket_a_transaksi_pos_2024_2025.csv
+├── notebooks/
+│   ├── analisis_transaksi_pos.ipynb
+│   ├── tugas_manipulasi_data_pandas.ipynb
+│   └── visualisasi_transaksi_pos.ipynb
+├── outputs/
+│   ├── pendapatan/
+│   │   ├── grafik_pendapatan_per_tahun.png
+│   │   └── hasil_pendapatan_per_tahun.csv
+│   └── visualisasi/
+│       └── visualisasi_gabungan_2025.png
+└── README.md
+```
 
 ## Daftar Tugas
 
 ### Tugas 1 — Analisis Pendapatan
 
-File: `analisis_transaksi_pos.ipynb`
+Notebook: [analisis_transaksi_pos.ipynb](notebooks/analisis_transaksi_pos.ipynb)
 
 - Memeriksa duplikat dan nilai kosong.
 - Membersihkan format tanggal dan harga.
 - Memeriksa kuantitas yang tidak wajar.
 - Menghitung pendapatan bersih tahun 2024 dan 2025.
-- Menyimpan ringkasan pendapatan dan grafik.
+- Menyimpan ringkasan pendapatan dan grafik ke `outputs/pendapatan/`.
 
 ### Tugas 2 — Manipulasi Data dengan Pandas
 
-File: `tugas_manipulasi_data_pandas.ipynb`
+Notebook: [tugas_manipulasi_data_pandas.ipynb](notebooks/tugas_manipulasi_data_pandas.ipynb)
 
 - Membersihkan format harga dan mengubah tipe data menjadi numerik.
 - Mengubah kuantitas negatif menjadi positif.
@@ -29,41 +46,27 @@ File: `tugas_manipulasi_data_pandas.ipynb`
 
 ### Tugas 3 — Visualisasi dengan Matplotlib
 
-File: `visualisasi_transaksi_pos.ipynb`
+Notebook: [visualisasi_transaksi_pos.ipynb](notebooks/visualisasi_transaksi_pos.ipynb)
 
-Empat grafik dibuat dari dataset yang sama:
+Empat grafik ditampilkan dalam **satu gambar berasio 1:1**, bukan sebagai empat file terpisah:
 
 1. Penjualan bersih per bulan tahun 2025.
 2. Sepuluh produk terlaris berdasarkan total unit terjual.
-3. Proporsi transaksi berhasil dan tidak selesai.
+3. Proporsi transaksi selesai, batal, dan retur.
 4. Hubungan jumlah pembelian dengan persentase diskon.
 
 ## Hasil Visualisasi Tahun 2025
 
-Data dibersihkan dengan menghapus 30 baris duplikat. Grafik penjualan dan produk terlaris memakai transaksi `SELESAI` dengan jumlah 1–12 unit. Penjualan bersih dihitung setelah diskon dan sebelum PPN. Batas jumlah 1–12 digunakan agar nilai salah input tidak mendominasi grafik.
+![Visualisasi gabungan transaksi POS 2025](outputs/visualisasi/visualisasi_gabungan_2025.png)
 
-Status transaksi dihitung dari seluruh 2.458 transaksi tahun 2025: 2.324 `SELESAI`, 87 `BATAL`, dan 47 `RETUR`. Grafik proporsi membandingkan `SELESAI` dengan gabungan `BATAL` dan `RETUR`. Jumlah `BATAL` dan `RETUR` tetap ditampilkan secara terpisah.
+Data dibersihkan dengan menghapus 30 baris duplikat. Setelah pembersihan terdapat 5.000 baris. Dataset mencatat 2.508 transaksi pada tahun 2025: 2.370 `SELESAI`, 89 `BATAL`, dan 49 `RETUR`.
 
-Empat grafik disusun dalam grid 2×2.
+Grafik penjualan dan produk terlaris memakai transaksi `SELESAI` dengan jumlah 1–12 unit. Penjualan bersih dihitung setelah diskon dan sebelum PPN. Batas jumlah tersebut digunakan agar nilai salah input tidak mendominasi grafik.
 
-<table>
-  <tr>
-    <td width="50%"><img src="visualisasi_penjualan_bulanan_2025.svg" alt="Penjualan bersih per bulan tahun 2025" width="100%" /></td>
-    <td width="50%"><img src="visualisasi_10_produk_terlaris_2025.svg" alt="Sepuluh produk terlaris tahun 2025" width="100%" /></td>
-  </tr>
-  <tr>
-    <td width="50%"><img src="visualisasi_status_transaksi_2025.svg" alt="Proporsi status transaksi tahun 2025" width="100%" /></td>
-    <td width="50%"><img src="visualisasi_jumlah_dan_diskon_2025.svg" alt="Hubungan jumlah pembelian dan diskon tahun 2025" width="100%" /></td>
-  </tr>
-</table>
-
-## Hasil Analisis Pendapatan
-
-| Tahun | Jumlah Transaksi | Total Barang | Pendapatan Kotor | Total Diskon | Pendapatan Bersih |
-| :---: | :---: | :---: | :---: | :---: | :---: |
-| **2024** | 2.327 | 5.967 unit | Rp 130.883.500 | Rp 3.477.025 | **Rp 127.406.475** |
-| **2025** | 2.345 | 6.050 unit | Rp 138.664.000 | Rp 3.662.900 | **Rp 135.001.100** |
+Grafik proporsi membandingkan transaksi `SELESAI` dengan gabungan `BATAL` dan `RETUR`. Rincian jumlah kedua status tetap ditampilkan secara terpisah.
 
 ## Menjalankan Notebook
 
-Buka notebook melalui Jupyter Notebook atau Google Colab. Letakkan file CSV di direktori yang sama dengan notebook. Paket yang digunakan: `pandas` dan `matplotlib`.
+Buka salah satu notebook di folder `notebooks/` melalui Jupyter Notebook atau Google Colab. Dataset tetap berada di folder `data/`; kode notebook mendeteksi direktori proyek dan menyimpan hasil ke folder `outputs/`.
+
+Paket yang digunakan: `pandas`, `numpy`, dan `matplotlib`.
