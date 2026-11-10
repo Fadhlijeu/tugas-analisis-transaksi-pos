@@ -44,11 +44,18 @@ Data dibersihkan dengan menghapus 30 baris duplikat. Grafik penjualan dan produk
 
 Status transaksi dihitung dari seluruh 2.458 transaksi tahun 2025: 2.324 `SELESAI`, 87 `BATAL`, dan 47 `RETUR`. Grafik proporsi membandingkan `SELESAI` dengan gabungan `BATAL` dan `RETUR`. Jumlah `BATAL` dan `RETUR` tetap ditampilkan secara terpisah.
 
-Empat grafik ditampilkan dalam satu gambar dengan susunan 2×2.
+Empat grafik disusun dalam grid 2×2.
 
-<p align="center">
-  <img src="visualisasi_gabungan_2025.png" alt="Empat grafik visualisasi transaksi POS tahun 2025 dalam susunan 2 kali 2" width="100%" />
-</p>
+<table>
+  <tr>
+    <td width="50%"><img src="visualisasi_penjualan_bulanan_2025.svg" alt="Penjualan bersih per bulan tahun 2025" width="100%" /></td>
+    <td width="50%"><img src="visualisasi_10_produk_terlaris_2025.svg" alt="Sepuluh produk terlaris tahun 2025" width="100%" /></td>
+  </tr>
+  <tr>
+    <td width="50%"><img src="visualisasi_status_transaksi_2025.svg" alt="Proporsi status transaksi tahun 2025" width="100%" /></td>
+    <td width="50%"><img src="visualisasi_jumlah_dan_diskon_2025.svg" alt="Hubungan jumlah pembelian dan diskon tahun 2025" width="100%" /></td>
+  </tr>
+</table>
 
 ## Hasil Analisis Pendapatan
 
